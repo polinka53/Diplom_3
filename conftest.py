@@ -11,7 +11,7 @@ def driver(request):
 
     if browser == "chrome":
         options = webdriver.ChromeOptions()
-        options.add_argument("--headless=new")          # без окна
+        options.add_argument("--headless=new")          
         options.add_argument("--window-size=1920,1080")
         options.add_argument("--no-sandbox")
         options.add_argument("--disable-dev-shm-usage")
@@ -19,7 +19,7 @@ def driver(request):
 
     elif browser == "firefox":
         options = webdriver.FirefoxOptions()
-        options.add_argument("-headless")               # без окна
+        options.add_argument("-headless")              
         options.set_preference("browser.tabs.warnOnClose", False)
         drv = webdriver.Firefox(options=options)
 
